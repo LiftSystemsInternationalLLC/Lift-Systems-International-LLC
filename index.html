@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="google-site-verification" content="lS7ldIAxvCUVOXAzKakuhZLC0unpfxgnW_1DzTFwba0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lift Systems International LLC | Independent Elevator Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0f1b29; /* Luxury Dark Slate Blue */
+            --accent: #c5a880;  /* Muted Gold */
+            --accent-hover: #b39368;
+            --text-dark: #2d3748;
+            --text-light: #f7fafc;
+            --bg-light: #f9fbfd;
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: 1px solid var(--accent);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 1px solid var(--text-light);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text-light);
+            color: var(--primary);
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            color: #718096;
+            font-size: 0.95rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .brand-name {
+            font-family: var(--font-heading);
+            color: var(--text-light);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(15, 27, 41, 0.85), rgba(15, 27, 41, 0.85)), 
+                        url('https://tapchithangmay.vn/apps/uploads/2022/03/DAV_2414.jpg') no-repeat center center/cover;
+            height: 80vh;
+            min-height: 550px;
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 3.8rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+            font-weight: 300;
+            color: #cbd5e0;
+        }
+
+        /* About Us Section */
+        .about {
+            background-color: #fff;
+        }
+
+        .about-grid {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            margin-bottom: 25px;
+            color: #4a5568;
+        }
+
+        .about-img-box {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-img-box img {
+            width: 100%;
+            height: auto;
+            box-shadow: 15px 15px 0px var(--accent);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-bottom: 3px solid transparent;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: var(--transition);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 3px solid var(--accent);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .service-img-wrapper {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .service-info {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .service-info p {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        .services-cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #fff;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--bg-light);
+            padding: 35px;
+            border-left: 2px solid var(--accent);
+            position: relative;
+        }
+
+        .testimonial-card i.quote-icon {
+            font-size: 2rem;
+            color: #e2e8f0;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #4a5568;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .client-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: var(--bg-light);
+        }
+
+        .faq-max {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .faq-question {
+            padding: 20px;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        /* Contact & Map Section */
+        .contact-section {
+            background-color: #fff;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: start;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 450px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .contact-details h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+
+        .contact-info-list {
+            list-style: none;
+        }
+
+        .contact-info-list li {
+            display: flex;
+            margin-bottom: 25px;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-info-list i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 4px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .contact-info-list h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #718096;
+            margin-bottom: 3px;
+        }
+
+        .contact-info-list p, .contact-info-list a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 60px 0 30px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-text {
+            color: #cbd5e0;
+            margin-bottom: 15px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1a2e44;
+            padding-top: 25px;
+            text-align: center;
+            color: #718096;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .about-grid {
+                flex-direction: column;
+            }
+            .about-img-box {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-menu {
+                gap: 20px;
+            }
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo-area">
+                <img src="https://liftsystemssolutions.com/wp-content/uploads/2026/01/Lift_Systems_International.png" alt="Lift Systems International LLC Logo" class="logo-img">
+                <span class="brand-name">Lift Systems International LLC</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Independent Elevator Consulting</h1>
+                <p>Lift Systems International LLC offers independent elevator consulting that is designed to be done when decisions carry lasting impacts. We support building owners, property managers, legal teams, and organizations all over the USA and EU, and surrounding areas that need clear technical judgment without the pressure to sell or buy something specific.</p>
+                <a href="https://liftsystemssolutions.com/" class="btn">Explore Website</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding about" id="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Lift Systems International LLC offers premier independent elevator consulting tailored to protect capital assets and streamline building lifecycles. We deliver trusted oversight when decisions carry deep, long-term impacts for infrastructure health.</p>
+                <p>Our collaborative services directly support building owners, asset managers, corporate facility teams, and legal counsels in navigating intricate modern vertical transit challenges efficiently.</p>
+                <a href="https://liftsystemssolutions.com/about-us/" target="_blank" class="btn">Learn More About Us</a>
+            </div>
+            <div class="about-img-box">
+                <img src="https://tapchithangmay.vn/apps/uploads/2022/03/DAV_2414.jpg" alt="Elevator Consulting Architecture">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Specialized Services</h2>
+            <p class="section-subtitle">Comprehensive vertical transportation strategies matching unmatched industry expertise with project execution integrity.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="https://elevatingroup.ru/wp-content/uploads/2025/08/to1.jpg" alt="Assessments & Analysis">
+                    </div>
+                    <div class="service-info">
+                        <h3>Assessments & Analysis</h3>
+                        <p>Thorough technical evaluations and status reporting to preserve equipment operations, manage safety rules compliance, and maximize structural lifespans.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="https://tapchithangmay.vn/apps/uploads/2022/03/DAV_2414.jpg" alt="Core Expertise & Consultancy">
+                    </div>
+                    <div class="service-info">
+                        <h3>Core Expertise & Consultancy</h3>
+                        <p>Bespoke advisory and engineering recommendations for tailored modernization, complex retrofits, and comprehensive legal and safety reviews.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="https://avatars.mds.yandex.net/get-altay/11487452/2a000001915b6e2947c02a8c5fb9fb47992a/XXL_height" alt="Project Lifecycle & Technical Services">
+                    </div>
+                    <div class="service-info">
+                        <h3>Project Lifecycle Management</h3>
+                        <p>End-to-end technical engineering guidance covering planning stages, installation milestones, full testing compliance, and long-term oversight.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="https://www.schindler.ae/content/dam/website/global/images/services/schindler-working-at-schindler-030.jpg/_jcr_content/renditions/original.image_file.1120.630.file/schindler-working-at-schindler-030.jpg" alt="Training & Development">
+                    </div>
+                    <div class="service-info">
+                        <h3>Training & Development</h3>
+                        <p>Professional building operations workforce training and advanced customized seminars explicitly crafted to increase system knowledge and technical capability.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-cta">
+                <a href="https://liftsystemssolutions.com/our-services/" target="_blank" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">Explore All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Reviews</h2>
+            <p class="section-subtitle">What property managers, legal firms, and asset teams say about our consulting values.</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Lift Systems International revolutionized how we handle our modernization timelines. Their independent posture saved us thousands in asset costs."</p>
+                    <div class="client-name">Property Portfolio Director, VA</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Indispensable technical litigation insight. Their rigorous investigative assessments offered deep stability during our legal reviews."</p>
+                    <div class="client-name">Senior Partner, Legal Counsel Group</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Professional, thorough, and completely accurate. The operational safety training programs given to our onsite facilities crews were world-class."</p>
+                    <div class="client-name">Operations Manager, High-Rise Assets</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding faq">
+        <div class="container faq-max">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Find immediate answers to standard structural questions about our vertical transit consulting practices.</p>
+            
+            <div class="faq-item">
+                <button class="faq-question">What does an independent elevator consultant do? <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p style="padding-bottom: 20px;">Independent consultants provide unbiased engineering insight, third-party code evaluations, asset preservation blueprints, and modernization contract assistance without any manufacturer conflicts of interest.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Why should building owners invest in third-party assessments? <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p style="padding-bottom: 20px;">Third-party assessments reveal true asset operational health, identify hidden safety liabilities early, protect long-range asset spending, and maximize vertical safety parameters.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How frequently should elevator systems undergo performance reviews? <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p style="padding-bottom: 20px;">We recommend structured structural and operational system status check-ups annually to maintain complete regulatory alignment and control asset structural deterioration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding contact-section" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-details">
+                <h3>Connect With Our Experts</h3>
+                <ul class="contact-info-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Corporate Headquarters</h4>
+                            <p>3060 Williams Drive Suite 300 suite #39<br>Fairfax, VA 22031, USA</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Direct Line</h4>
+                            <p><a href="tel:5402704439">(540) 270-4439</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email Communications</h4>
+                            <p><a href="mailto:david@liftsystemssolutions.com">david@liftsystemssolutions.com</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h4>Consultation Availability</h4>
+                            <p>Monday – Sunday<br>6:00 AM – 9:00 PM</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191230.22152880466!2d-77.27932599999998!3d38.7995965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64d8494013227%3A0x695b41ce73f12ad5!2sLift%20Systems%20International%20LLC!5e1!3m2!1sen!2s!4v1782940787341!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Lift Systems International</h3>
+                <p class="footer-text">Providing reliable independent structural counseling framework constructed for enduring operational optimization.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Industry Connections</h3>
+                <ul class="footer-links">
+                    <li><a href="https://liftsystemssolutions.com/" target="_blank">Official Website</a></li>
+                    <li><a href="https://g.page/r/CdUq8XPOQVtpEBM/" target="_blank">Google Business Profile</a></li>
+                    <li><a href="https://www.google.com/search?kgmid=/g/11b8znpntp" target="_blank">Knowledge Graph Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Ranking Geeks. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                button.classList.toggle('active');
+                
+                if (button.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    answer.style.padding = "0 20px 20px 20px";
+                    icon.style.transform = "rotate(180deg)";
+                    icon.style.transition = "transform 0.3s ease";
+                } else {
+                    answer.style.maxHeight = 0;
+                    answer.style.padding = "0 20px 0 20px";
+                    icon.style.transform = "rotate(0deg)";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
